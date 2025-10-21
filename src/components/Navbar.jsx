@@ -12,6 +12,7 @@ const Navbar = () => {
 
             <div className="space-x-4 text-blue-500 font-semibold">
                 <Link className={isActive("/") ? "underline underline-blue-700 underline-offset-4" : ""} to="/">Home</Link>
+                <Link className={isActive("/dashboard") ? "underline underline-blue-700 underline-offset-4" : ""} to="/dashboard">Dashboard</Link>
                 <Link className={isActive("/products") ? "underline underline-blue-700 underline-offset-4" : ""} to="/products">Products</Link>
                 <Link className={isActive("/about") ? "underline underline-blue-700 underline-offset-4" : ""} to="/about">About</Link>
                 <Link className={isActive("/contact") ? "underline underline-blue-700 underline-offset-4" : ""} to="/contact">Contact</Link>
