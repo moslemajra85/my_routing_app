@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
-const Navbar = () => {
+const Navbar = ({ isAuthenticated, handleLogout }) => {
 
     const location = useLocation()
 
@@ -16,6 +16,7 @@ const Navbar = () => {
                 <Link className={isActive("/products") ? "underline underline-blue-700 underline-offset-4" : ""} to="/products">Products</Link>
                 <Link className={isActive("/about") ? "underline underline-blue-700 underline-offset-4" : ""} to="/about">About</Link>
                 <Link className={isActive("/contact") ? "underline underline-blue-700 underline-offset-4" : ""} to="/contact">Contact</Link>
+                {isAuthenticated && <button onClick={handleLogout} className="text-red-500 underline underline-offset-4 cursor-pointer">Logout</button>}
             </div>
         </nav>
     )

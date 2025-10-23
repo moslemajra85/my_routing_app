@@ -3,10 +3,10 @@ import Footer from "./Footer"
 import { Outlet } from "react-router-dom"
 import About from "../pages/About"
 
-const Layout = () => {
+const Layout = ({ isAuthenticated, handleLogout }) => {
     return (
         <div>
-            <Navbar />
+            <Navbar isAuthenticated={isAuthenticated} handleLogout={handleLogout} />
             <Outlet />
             <Footer />
         </div>
